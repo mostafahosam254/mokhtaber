@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        معامل المختبر | home - معامل المختبر
+    </title>
+
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.almokhtabar.com/o/almokhtabar-lab-theme/images/favicon-16x16.png">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/css-index-red.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div ng-view="" class="ng-scope">
+
+        <style type="text/css" class="ng-scope">
+            .btn {
+                margin: 5px;
+            }
+
+            .btn span.glyphicon {
+                opacity: 0;
+            }
+
+            .btn.active span.glyphicon {
+                opacity: 1;
+            }
+
+            span2 {
+                margin: 5px;
+            }
+
+            .fullscreen {
+                background-size: cover !important;
+            }
+        </style>
+        <style class="ng-scope">
+            .list-group-item.active,
+            .list-group-item.active:focus,
+            .list-group-item.active:hover {
+                border-color: #d34a4a;
+                background-color: #d34a4a
+            }
+        </style>
+
+        <div id="menu-sticky-wrapper" class="sticky-wrapper" style="height: 50px;">
+            <div id="menu" style="">
+                <nav class="navbar-wrapper navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                            <a class="navbar-brand site-name" href="http://www.almokhtabar.com/"><img src="img/logo2.png" alt="logo"></a>
+                        </div>
+
+                        <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li class=""><a href="">Test Results</a></li>
+                                <li><a href="">Test library</a></li>
+                                <li><a href="">Reservation</a></li>
+                                <li><a href="">Loyality Programs</a></li>
+                                <li><a href="">Packages</a></li>
+                                <li><a href="">Test precaution</a></li>
+                                <li><a href="">House Visit</a></li>
+                                <a href="" target="_self" class=" btn btn-danger" style="margin-top: 8px; background-color: #b91219"> عربي </a>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="fullscreen landing parallax" style="background-image: url(&quot;img/bg-2.jpg&quot;); background-attachment: fixed; " data-img-width="2000" data-img-height="1333" data-diff="100">
+
+            <div class="overlay" style="background-color: rgba(54, 81, 91, 0.5)">
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1 text-center" style="margin-bottom: 100px; margin-top: 100px">
+
+                        
+                        
+                        <div class="logo wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                            </div>
+
+                       
+                        <h2 class="wow fadeInUp animated" style="margin-bottom: 100px; margin-top: 100px; visibility: visible; animation-name: fadeInUp;"></h2>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center ng-scope">
+            
+            
+            <h3 style="display: inline-block" ng-if="visitoraccess" class="ng-scope">Required Visit!</h3>
+            
+            
+
+        </div>
+        <div id="test-result">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="wow fadeInLeft">Services</h2>
+                    <div class="title-line wow fadeInRight"></div>
+                </div>
+                <div class="row">
+
+
+                    <div ng-view></div>
+
+
+                </div>
+            </div>
+        </div>
+        <br class="ng-scope">
+        <div class="container">
+            <div class="panel-group ng-scope" id="accordion" role="tablist" aria-multiselectable="true" ng-if="visitoraccess">
+               
+                
+                <div class="panel panel-default ng-scope" ng-repeat="visit in results.testResultVisits">
+                    
+                    
+                    <div class="panel-heading ng-scope" role="tab" id="headingOne" ng-if="visit.VisitNumber === visitreq">
+                        <div class="panel-body">
+                            
+                            
+                            <div ng-repeat="test in visit.testResults" class="ng-scope">
+                                <ul>
+
+
+
+
+
+<!-- هنا اللينك و الرقم -->
+<li class="ng-binding"> هنا الرقم <a href="هنا اللينك" target="_blank" style="float: initial"> ( Open Result  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>  )</a></li>        <!-- هنا اللينك و الرقم -->
+
+<!-- هنا اللينك و الرقم -->
+
+
+
+
+
+                                   
+
+                                </ul>
+                            </div>
+                            
+                            
+                            <div>
+                                
+                                
+
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="general">
+                                        <form class="form-header2 ng-pristine ng-invalid ng-invalid-required">
+                                           
+                                            
+                                        
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                                
+                                                
+                                                <div ng-if="question.QuestionType === 0" class="ng-scope">
+                                                    <div style="text-align: right">
+                                                        <p class="ng-binding">بناء على زيارتك الأخيرة لمعاملنا ، على مقياس من 1 الى 10، إلى أى مدى ستقوم بترشيحنا لأقاربك واصدقاءك؟ علما بأن 10 هى بالتأكيد نعم و 1 بالتأكيد لا</p>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <div class="container">
+                                                            <div class="widget widget-lg">
+                                                                <div class="button-container">
+                                                                    <div style=" text-align: center;">
+                                                                        <div>
+
+                                                                            <div class="btn-group" data-toggle="buttons">
+                                                                                <span class="negative-text" style="float: left; font-size: 35px; padding-top:8px;"></span>
+                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="1" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">1</span2>
+    
+                                                </label>
+                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="2" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">2</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="3" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">3</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="4" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">4</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="5" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">5</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="6" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">6</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="7" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">7</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="8" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">8</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="9" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">9</span2>
+    
+                                                </label>
+                                                                                            <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="10" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">10</span2>
+    
+                                                </label>
+                                                                               
+                                                
+                                                                                <span class="positive-text" style="    font-size: 35px; float: left; padding-top:8px;"></span>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+
+                                            </div>
+                                            
+                                            
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                                
+                                                
+
+                                            </div>
+                                           
+                                            
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                               
+                                                
+                                                <div ng-if="question.QuestionType === 0" class="ng-scope">
+                                                    <div style="text-align: right">
+                                                        <p class="ng-binding">ما مدي رضاك عن موظف الاستقبال الذي قام بخدمتكم علي المقياس من 1 الي 10 ؟ علما بأن 10 هى راضى جدا و 1 غير راضى تماما</p>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <div class="container">
+                                                            <div class="widget widget-lg">
+                                                                <div class="button-container">
+                                                                    <div style=" text-align: center;">
+                                                                        <div>
+
+                                                                            <div class="btn-group" data-toggle="buttons">
+                                                                                <span class="negative-text" style="float: left; font-size: 35px; padding-top:8px;"></span>
+                                                                                                                    <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="1" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">1</span2>
+    
+                                                </label>
+                                                                                                                    <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="2" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">2</span2>
+    
+                                                </label>
+                                                                                                                    <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="3" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">3</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="4" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">4</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="5" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">5</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="6" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">6</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="7" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">7</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="8" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">8</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="9" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">9</span2>
+    
+                                                </label>
+                                                                                                                        <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="10" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">10</span2>
+    
+                                                </label>
+
+                                                                                <span class="positive-text" style="    font-size: 35px; float: left; padding-top:8px;"></span>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                                
+
+                                            </div>
+                                            
+                                            
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                                
+                                                
+
+                                            </div>
+                                           
+                                            
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                               
+                                                
+                                                <div ng-if="question.QuestionType === 0" class="ng-scope">
+                                                    <div style="text-align: right">
+                                                        <p class="ng-binding">ما مدي رضاك عن طبيب سحب العينة الذي قام بخدمتكم علي المقياس من 1 الي 10؟ علما بأن 10 هى راضى جدا و 1 غير راضى تماما</p>
+                                                    </div>
+                                                    <div class="col-md-12 ">
+                                                        <div class="container">
+                                                            <div class="widget widget-lg">
+                                                                <div class="button-container">
+                                                                    <div style=" text-align: center;">
+                                                                        <div>
+
+                                                                            <div class="btn-group" data-toggle="buttons">
+                                                                                <span class="negative-text" style="float: left; font-size: 35px; padding-top:8px;"></span>
+                                                                                <label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="1" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">1</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="2" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">2</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="3" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">3</span2>
+    
+                                                </label>
+                                                                               <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="4" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">4</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="5" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">5</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="6" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">6</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="7" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">7</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="8" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">8</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="9" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">9</span2>
+    
+                                                </label>
+                                                                               <!-- Tera Tronics traning & developing academy --><label class="btn btn-danger  ng-scope" ng-repeat="val in myOptions" ng-click="answers(question.Id,val,question.QuestionType)"> 
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="question.SelectedSurveyAnswer" value="10" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                    <span2 class="ng-binding">10</span2>
+    
+                                                </label>
+                                                                                <!-- Tera Tronics traning & developing academy -->
+                                                                                <span class="positive-text" style="    font-size: 35px; float: left; padding-top:8px;"></span>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Tera Tronics traning & developing academy -->
+
+                                            </div>
+                                           <!-- Tera Tronics traning & developing academy -->
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                                
+                                                <!-- Tera Tronics traning & developing academy -->
+
+                                            </div>
+                                           <!-- Tera Tronics traning & developing academy -->
+                                            <div class="form-group ng-scope" ng-repeat="question in VisitQuestions">
+                                               
+                                                
+                                                <!-- Tera Tronics traning & developing academy -->
+
+
+                                                <div ng-if="question.QuestionType === 1" class="ng-scope">
+                                                    <div style="text-align: right">
+
+                                                        <p class="ng-binding">اخري</p>
+                                                    </div>
+                                                    <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" type="text" placeholder="Comment" ng-model="question.SelectedSurveyAnswer" required="">
+                                                </div>
+                                               <!-- Tera Tronics traning & developing academy -->
+
+                                            </div>
+                                            <!-- Tera Tronics traning & developing academy -->
+                                             <div class="form-group last" ng-show="showbtn">
+                                                <!-- <input type="submit" class="btn btn-danger btn-block"  value="Submit"  > -->
+
+                                                <a href="thanks/thanks_messeg.html" class="btn btn-danger btn-block"> Submit </a>
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tera Tronics traning & developing academy -->
+                </div>
+                <!-- Tera Tronics traning & developing academy -->
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="col-sm-4 col-sm-offset-4">
+                <hr>
+                <div class="text-center wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                    Copyright Almokhtabar 2021 <br>
+                    2021 © Central Public Health Laboratories All Rights Reserved<br>
+                    Developed and Designed By  Tera Tronics Team.
+                </div>
+                <a href="#" class="scrollToTop" style="display: inline;"><i class="pe-7s-up-arrow pe-va"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-cookies.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
